@@ -17,7 +17,7 @@ let inventory1 = [
 console.log(`Total ${getTotal(inventory1)}`);
 
 // 02 - Function
-// countBanana(inventory:['🥑','🍌','🥭', '🍌']})
+// countBanana(inventory:['🥑','🍌','🥭', '🍌']});
 
 let bananaCounter = (fruits) => {
   const arrayOfBananas = fruits.filter((item) => item === "🍌");
