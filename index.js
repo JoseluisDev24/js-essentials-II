@@ -205,6 +205,7 @@ const guestList = [
   "David 🤵🏿‍♂️",
   "David 🤵🏿‍♂️",
   "David 🤵🏿‍♂️",
+  "David 🤵🏿‍♂️"
   "Pedro 🤵🏿‍♂️",
 ];
 function getGetUniqueGuestList(guestList) {
