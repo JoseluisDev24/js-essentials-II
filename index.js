@@ -197,6 +197,15 @@ console.log(findMax(numbers2));
 // Remove duplicated elements from the  guests list
 // Expected getGetUniqueGuestList(guestList)) ['Alice 🙆🏻‍♀️', 'Bob 🙍🏼', 'Charlie 👨🏼‍🚀', 'David 🤵🏿‍♂️']
 
+const guestList = ["Alice 🙆🏻‍♀️", "Bob 🙍🏼", "Charlie 👨🏼‍🚀", "David 🤵🏿‍♂️"];
+function getGetUniqueGuestList(guestList) {
+  let sinDuplicados = new Set(guestList);
+  let result = [...sinDuplicados];
+  return result;
+}
+
+console.log(getGetUniqueGuestList(guestList));
+
 // 10 - function showUserProfiles(user)
 // User data
 
