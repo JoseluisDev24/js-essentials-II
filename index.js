@@ -4,20 +4,81 @@
 // getTotal(inventory: [{article: '🍔', price: 15, quantity: '1'}, {article: '🍟', price: 10, quantity: '2'}])
 // it should return the total. for the example data 👆 it should be: 35. (15x1 + 10x2)
 
+let getTotal = (inventory) =>
+  inventory.reduce(
+    (accumulator, article) => accumulator + article.price * article.quantity,
+    0
+  );
+
+let inventory1 = [
+  { article: "🍔", price: 15, quantity: "1" },
+  { article: "🍟", price: 10, quantity: "2" },
+];
+console.log(`Total ${getTotal(inventory1)}`);
+
 // 02 - Function
-// countBanana(inventory:['🥑','🍌','🥭', '🍌']})
+// countBanana(inventory:['🥑','🍌','🥭', '🍌']});
+
+let bananaCounter = (fruits) => {
+  const arrayOfBananas = fruits.filter((item) => item === "🍌");
+
+  return `There are ${arrayOfBananas.length} bananas!`;
+};
+
+let inventory = ["🥑", "🍌", "🥭", "🍌"];
+bananaCounter(inventory);
+
+// countBanana reduce
 
 // 03- Function
 //   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 //   console.log(filterEvenNumbers(numbers)); // Output: [2, 4, 6, 8, 10]
 
+const numbers = [1, 2, 3, 4, 50, 6, 7, 8, 9, 10];
+
+let filterEvenNumbers = (numbers) => {
+  return numbers.filter((number) => number % 2 === 0);
+};
+
+console.log(filterEvenNumbers(numbers));
+
 // 04 - function
 //   const numbers = [1, 2, 3, 4, 5];
 //   console.log(squareNumbers(numbers)); // Output: [1, 4, 9, 16, 25]
 
-// 05 - function
-//   const numbers = [1, 2, 3, 4, 5];
-//   console.log(findMax(numbers)); // Output: 5
+const numbers1 = [1, 2, 3, 4, 5];
+
+let squareNumbers = (numbers) => {
+  return numbers.map((number) => number * number);
+};
+
+console.log(squareNumbers(numbers1));
+
+// 05 - function reduce
+// const numbers = [1, 2, 3, 4, 5];
+// console.log(findMax(numbers)); // Output: 5
+
+const numbers2 = [1, 2, 3, 4, 5];
+
+let findMax = (numbers) => {
+  return numbers.reduce(
+    (accumulator, number) => (number > accumulator ? number : accumulator),
+    0
+  );
+};
+console.log(findMax(numbers2));
+
+// gonzalo's example
+// let findMax = (numbers) => {
+//   let maxNum = 0;
+//   numbers.map((num) => {
+//     if (num > maxNum) {
+//       maxNum = num;    }
+//   });
+//   return maxNum;
+// };
+
+// console.log(findMax(numbers));
 
 // 06 - function
 //   const people = [
@@ -135,6 +196,15 @@
 
 // Remove duplicated elements from the  guests list
 // Expected getGetUniqueGuestList(guestList)) ['Alice 🙆🏻‍♀️', 'Bob 🙍🏼', 'Charlie 👨🏼‍🚀', 'David 🤵🏿‍♂️']
+
+const guestList = ["Alice 🙆🏻‍♀️", "Bob 🙍🏼", "Charlie 👨🏼‍🚀", "David 🤵🏿‍♂️"];
+function getGetUniqueGuestList(guestList) {
+  let sinDuplicados = new Set(guestList);
+  let result = [...sinDuplicados];
+  return result;
+}
+
+console.log(getGetUniqueGuestList(guestList));
 
 // 10 - function showUserProfiles(user)
 // User data
