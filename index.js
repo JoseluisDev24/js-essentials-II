@@ -205,6 +205,7 @@ const guestList = [
   "David 🤵🏿‍♂️",
   "David 🤵🏿‍♂️",
   "David 🤵🏿‍♂️",
+  "David 🤵🏿‍♂️"
 ];
 function getGetUniqueGuestList(guestList) {
   let sinDuplicados = new Set(guestList);
