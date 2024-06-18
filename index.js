@@ -89,23 +89,7 @@ console.log(findMax(numbers2));
 //   ];
 //   console.log(calculateAverageAge(people)); // Output: 32.5
 
-const people = [
-  { name: "Juan", age: 25 },
-  { name: "Carla", age: 30 },
-  { name: "Lucia", age: 35 },
-  { name: "El Chengue", age: 49 },
-];
-
-let calculateAverageAge = (people) => {
-  return (
-    people.reduce((accumulator, person) => accumulator + person.age, 0) /
-    people.length
-  );
-};
-
-console.log(calculateAverageAge(people));
-
-// 07 - function  combinedHobbies(persons) ***************
+// 07 - function  combinedHobbies(persons)
 // Function to combine hobbies from all persons
 
 // const persons = [
@@ -212,21 +196,6 @@ console.log(calculateAverageAge(people));
 
 // Remove duplicated elements from the  guests list
 // Expected getGetUniqueGuestList(guestList)) ['Alice 🙆🏻‍♀️', 'Bob 🙍🏼', 'Charlie 👨🏼‍🚀', 'David 🤵🏿‍♂️']
-
-const guestList = ["Alice 🙆🏻‍♀️", "Bob 🙍🏼", "Charlie 👨🏼‍🚀", "David 🤵🏿‍♂️"];
-function getGetUniqueGuestList(guestList){
-  let sinDuplicados = new Set(guestList);
-  let result = [...sinDuplicados];
-  return result;
-}
-
-console.log(getGetUniqueGuestList(guestList));
-
-// const guestList = ["Alice 🙆🏻‍♀️", "Bob 🙍🏼", "Charlie 👨🏼‍🚀", "Alice 🙆🏻‍♀️", "David 🤵🏿‍♂️"];
-// let sinDuplicados = new Set(guestList);
-// let result = [...sinDuplicados];
-// console.log(result);
-
 
 // 10 - function showUserProfiles(user)
 // User data
