@@ -120,6 +120,25 @@ console.log(findMax(numbers2));
 //   'dancing 💃', 'singing 🎤', 'running 🏃‍♀️'
 // ]
 
+const persons = [
+  {
+    name: "Paula",
+    hobbies: ["reading 📚", "gardening 🌱", "painting 🎨"],
+  },
+  {
+    name: "Martin",
+    hobbies: ["cycling 🚴", "cooking 🍳", "hiking 🥾"],
+  },
+  {
+    name: "Juan",
+    hobbies: ["photography 📸", "traveling ✈️", "swimming 🏊‍♂️"],
+  },
+  {
+    name: "Veronica",
+    hobbies: ["dancing 💃", "singing 🎤", "running 🏃‍♀️"],
+  },
+];
+
 // 08 - function printChemicalInfo(chemicals)
 // const chemicals = [
 //     {
@@ -199,13 +218,15 @@ console.log(findMax(numbers2));
 
 const guestList = [
   "Alice 🙆🏻‍♀️",
+
   "Bob 🙍🏼",
   "Charlie 👨🏼‍🚀",
   "Alice 🙆🏻‍♀️",
   "David 🤵🏿‍♂️",
   "David 🤵🏿‍♂️",
   "David 🤵🏿‍♂️",
-  "David 🤵🏿‍♂️"
+  "David 🤵🏿‍♂️",
+  "Pedro 🤵🏿‍♂️",
 ];
 function getGetUniqueGuestList(guestList) {
   let sinDuplicados = new Set(guestList);
@@ -242,17 +263,17 @@ console.log(getGetUniqueGuestList(guestList));
 // 11 - function sortLeaderBoardByScoreDesc(leaderBoard)
 // The function should sort the players by score as it's displayed on the expected output
 
-// const leaderBoard = [
-//     { player: 'John', score: 80 },
-//     { player: 'Charlie', score: 20 }
-//     { player: 'Julio', score: 50 },
-//     { player: 'Bob', score: 80 },
-//     { player: 'Bobby', score: 11 }
-//     { player: 'Tommy', score: 43 },
-//     { player: 'Eric', score: 99 },
-//     { player: 'Alice', score: 100 },
-//     { player: 'Alfred', score: 30 }
-//   ];
+const leaderBoard = [
+  { player: "John", score: 80 },
+  { player: "Charlie", score: 20 },
+  { player: "Julio", score: 50 },
+  { player: "Bob", score: 80 },
+  { player: "Bobby", score: 11 },
+  { player: "Tommy", score: 43 },
+  { player: "Eric", score: 99 },
+  { player: "Alice", score: 100 },
+  { player: "Alfred", score: 30 },
+];
 
 // Expected output:
 // [
@@ -266,6 +287,11 @@ console.log(getGetUniqueGuestList(guestList));
 //   { player: 'Charlie', score: 20 },
 //   { player: 'Bobby', score: 11 }
 // ]
+
+function sortDesc(leaderBoard) {
+  return leaderBoard.sort((a, b) => b.score - a.score);
+}
+console.log(leaderBoard);
 
 // 12 - function
 
@@ -281,6 +307,12 @@ console.log(getGetUniqueGuestList(guestList));
 // ]
 
 // NOTE: ⚠️ original array shouldn't be modified. or we are missing players.
+
+let getTopFiveWorstPlayers = (leaderBoard) => {
+  return leaderBoard.toSorted((a, b) => a.score - b.score).slice(0, 5);
+};
+
+console.log(leaderBoard);
 
 // 13 - function safeCopy()
 // const companyHierarchy = {
